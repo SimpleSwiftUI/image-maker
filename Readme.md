@@ -1,7 +1,7 @@
 # Image Maker
 
 ## Overview
-Image Maker is a simple SwiftUI application for iOS 17 that demonstrates basic image generation in SwiftUI and saving the generated image to the Photos app. Created by Robert Brennan on 2/24/24, this project aims to showcase the integration of UIKit with SwiftUI for generating random images and handling permissions to access the photo library.
+Image Maker is a simple SwiftUI application for iOS 17 that demonstrates basic image generation in SwiftUI and saving the generated image to the Photos app. This project aims to showcase the integration of UIKit with SwiftUI for generating random images and handling permissions to access the photo library.
 
 ![image-maker screen capture](screen-capture/image-maker.gif)
 
