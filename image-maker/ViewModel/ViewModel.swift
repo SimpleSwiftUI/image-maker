@@ -11,6 +11,21 @@ import UIKit
 import SwiftUI
 import CoreData
 
+//
+// PERMISSIONS
+//
+// To save the photo to the Photos app on the device, Info.plist must
+// include NSPhotoLibraryUsageDescription with some description text.
+//
+// In XCode > Click <project name> at the top of the Project Navigator (left panel) >
+// Click <project name> under Targets > Click "Info" tab > Under "Custom iOS Target Properties",
+// right-click and choose "Raw Keys and Values". Hover mouse on a row item and click the (+) icon >
+// In the new row, type: "NSPhotoLibraryUsageDescription" > Hit tab to focus on the Value column >
+// Enter reason for accessing photos (user will see this); e.g. "Need Photos access to save image"
+//
+// The first time the user saves an image, they will be prompted for permission.
+//
+
 class ViewModel: ObservableObject {
     private var managedObjectContext: NSManagedObjectContext
     
@@ -57,21 +72,6 @@ class ViewModel: ObservableObject {
             self.showImageCover = true
         }
     }
-    
-    //
-    // PERMISSIONS
-    //
-    // To save the photo to the Photos app on the device, Info.plist must
-    // include NSPhotoLibraryUsageDescription with some description text.
-    //
-    // In XCode > Click <project name> at the top of the Project Navigator (left panel) >
-    // Click <project name> under Targets > Click "Info" tab > Under "Custom iOS Target Properties",
-    // right-click and choose "Raw Keys and Values". Hover mouse on a row item and click the (+) icon >
-    // In the new row, type: "NSPhotoLibraryUsageDescription" > Hit tab to focus on the Value column >
-    // Enter reason for accessing photos (user will see this); e.g. "Need Photos access to save image"
-    //
-    // The first time the user saves an image, they will be prompted for permission.
-    //
     
     func saveImageToPhotos(image: UIImage) {
         saveImageToPhotos(image)
